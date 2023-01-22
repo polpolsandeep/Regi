@@ -16,14 +16,16 @@ function App() {
     <div className='app'>
       <Router>
         <Routes>
-          <Route path='/'>
+          <Route path='/' element=
             {
               user && user._id?<Home setLoginUser={setLoginUser} />:<Login setLoginUser={setLoginUser}/>
-            }
+            }>
+            
+            
             </Route>
-          <Route path='/register'><Register/></Route>
-          <Route path='/login'>
-            <Login setLoginUser={setLoginUser}/>
+          <Route path='/register' element={<Register/>}></Route>
+          <Route path='/login' element={<Login setLoginUser={setLoginUser}/>}>
+            
             </Route>
         </Routes>
       </Router>    
